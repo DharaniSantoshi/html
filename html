@@ -1,0 +1,94 @@
+<html>
+<head>	
+<title>Employee Details</title>
+</head>
+<body>
+<h1>Employee Details</h1>
+<form method="post">
+<p>Enter your Name:</p>
+<input type="text" name="Nmae"/>
+<p>Enter your email:</p>
+<input type="email" name=Email"/>
+<p>Enter phone number:</p>
+<input type="number" name="phone number"/>
+<p>Enter your depatment:</p>
+<input type="text" name="Department"/>
+<p>Enter date:</p>
+<input type="number" name="Date"/>
+<p>Enter your password:</p>
+<input type="password" name="Password"/>
+<input type=”save” value=”save”/>
+</form>
+</body>
+
+
+<html>
+<head>
+<title>Add Tasks</title>
+</head>
+<body>
+<form>
+<h2>Add Tasks<h2>
+<select name ="Task Type">
+<option value = "Break">Break</option>
+<option value="Meeting">Meeting</option>
+<option value="Work">Work</option>
+</select></br>
+<select name="start time">
+<option value="Date">Date</option>
+<option value="Time">Time</option>
+</select>
+<p>Enter time taken</p>
+<input type="number" name="Time Taken"/></br>
+<input type="Add" value="Add"/>
+</body>
+</form>
+</html>
+
+<html>
+<head>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+google.charts.load('current',{packages':['corechart']}0;
+google.charts.setOnLoadcallback(drawfunction);
+function drawfunction(){
+var data=google.visualization.arrayToDataTable([
+["tasks","time"],
+["break",""35"],
+["work","65"],
+]);
+var options={title:'My Chart"};
+var char=new google.visualization.piechart(dopcument.getElementById('box'));
+char.draw(data,options);
+}
+</script>
+</head>
+<body>
+<div id="box" style="height:500px;width:700px">
+</div>
+
+<html>
+<head>
+<title>Admin</title>
+</head>
+<body>
+<form>
+<h2>Admin login</h2>
+<p>Enter User Name</p>
+<input type="text" name="Username">
+<p>Enter Password</p>
+<input type="password" name="password">
+</form>
+</body>
+
+var xValues = ["work","meet","break"];
+var yValues = [35,49,16];
+var barcolors = ["red","green","blue"];
+
+new chart("my chart",
+{type: "bar",data:{
+labels: xValues,
+datasets:[{backgroundcolor: barcolors,data:yvalues}]
+},
+options: {...}
+});
